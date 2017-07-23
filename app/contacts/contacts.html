@@ -21,6 +21,7 @@
     </div>
 </div>
 
+<!--Add Contact-->
 <form ng-show="addFormShow" ng-submit="addFormSubmit()">
     <!-- Add Form -->
 
@@ -98,6 +99,84 @@
     </div>
 </form>
 
+<!--Edit Contact-->
+<form ng-show="editFormShow" ng-submit="editFormSubmit()">
+    <!-- Add Form -->
+
+
+    <div class="row">
+        <div class="large-6 columns">
+            <h3>Edit Contact</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-6 columns">
+
+            <label>Name:
+                    <input type="text" ng-model="name" placeholder="Contact Name" required />
+                  </label>
+        </div>
+        <div class="large-6 columns">
+            <label>Email:
+                    <input type="text" ng-model="email" placeholder="Contact Email" required />
+                  </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-6 columns">
+            <label>Company:
+                     <input type="text" ng-model="company" placeholder="Company Name" required />
+                   </label>
+        </div>
+        <div class="large-6 columns">
+            <label>Work Phone:
+                     <input type="text" ng-model="work_phone" placeholder="Work Phone" required />
+                   </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-6 columns">
+            <label>Mobile Phone:
+                      <input type="text" ng-model="mobile_phone" placeholder="Mobile Phone" required />
+                    </label>
+        </div>
+        <div class="large-6 columns">
+            <label>Home Phone:
+                      <input type="text" ng-model="home_phone" placeholder="Home Phone" required />
+                    </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-6 columns">
+            <label>Street Address:
+                       <input type="text" ng-model="street_address" placeholder="Street Address" required />
+                     </label>
+        </div>
+        <div class="large-6 columns">
+            <label>City:
+                       <input type="text" ng-model="city" placeholder="City" required />
+                     </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-6 columns">
+            <label>State:
+                        <input type="text" ng-model="state" placeholder="State" required />
+                      </label>
+        </div>
+        <div class="large-6 columns">
+            <label>Zip Code:
+                        <input type="text" ng-model="zipcode" placeholder="Zip Code" required />
+                      </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <input type="submit" value="Update Contact" class="button" />
+        </div>
+    </div>
+</form>
+
 <div class="row">
     <div class="large-10 columns">
         <h3>Your Contacts ({{length}})</h3>
@@ -116,15 +195,16 @@
                     <td>{{contact.company}}</td>
                     <td>{{contact.email}}</td>
                     <td>
-                        <a href="#" class="button tiny" ng-click="showEditForm(contact)">Edit</a>
-                        <a href="#" class="button tiny alert" ng-click="removeContact(contact)">Delete</a>
+                        <a class="button tiny" ng-click="showEditForm(contact)">Edit</a>
+                        <a class="button tiny alert" ng-click="removeContact(contact)">Delete</a>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="small-12 large-2 columns">
-        <a href="" class="button large" ng-click="showAddForm()" ng-hide="addFormShow">+</a>
-        <a href="" class="button large" ng-click="hide()" ng-show="addFormShow">-</a>
+        <a class="button large" ng-click="showAddForm()" ng-hide="addFormShow">+</a>
+        <a class="button large" ng-click="hide()" ng-show="addFormShow">-</a>
+        <a class="button large" ng-click="hide()" ng-show="contactShow">-</a>
     </div>
 </div>
